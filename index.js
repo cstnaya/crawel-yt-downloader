@@ -1,7 +1,10 @@
 import { crawlerInteractor } from "./interact-crawler.js";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 (async () => {
-  const url = "https://www.youtube.com/@NintendoJP/videos";
+  const url = process.env.url;
 
   crawlerInteractor(url);
 })();
